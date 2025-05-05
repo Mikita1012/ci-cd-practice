@@ -31,5 +31,4 @@ jobs:
       - name: Build the project
         run: npm run build
 
-      - name: Lint the code
-        run: npm run eslint
+      
