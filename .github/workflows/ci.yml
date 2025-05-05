@@ -2,9 +2,9 @@ name: CI Pipeline
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -17,10 +17,19 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          #strategy:
+            #matrix:
+              #node-version: [14, 16, 18] #add a matrix strategy to run tests in parallel
+              node-version: 18 
 
       - name: Install dependencies
         run: npm install
 
       - name: Run tests
         run: npm test
+
+      - name: Build the project
+        run: npm run build
+
+      - name: Lint the code
+        run: npm run eslint
