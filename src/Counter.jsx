@@ -4,9 +4,9 @@ function Counter() {
   const [count, setCount] = useState(0);
   return (
     <div>
-      <button onClick={() => setCount(count + 1)}>Add</button>
+      <button style={{width: "100px"}} onClick={() => setCount(count - 1)}>Subtract</button>
       {count}
-      <button onClick={() => setCount(count - 1)}>Subtract</button>
+      <button style={{width: "100px"}} onClick={() => setCount(count + 1)}>Add</button>
     </div>
   );
 }

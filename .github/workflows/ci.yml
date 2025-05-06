@@ -31,4 +31,14 @@ jobs:
       - name: Build the project
         run: npm run build
 
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v2
+        with:
+          publish-dir: './build'
+          production-branch: 'main'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: 'Deployed from GitHub Actions 🚀'
+          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          site-id: 1b425a81-9f91-4743-875a-4d3ae10516b2
+
       
