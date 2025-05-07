@@ -1,5 +1,6 @@
 
 import Counter from './Counter';
+import Footer from './Footer';
 import Hello from './Hello';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <> 
     <Hello />
     <Counter />
+    <Footer/>
     </>
       
   );
