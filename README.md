@@ -72,3 +72,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ![Build Status](https://github.com/Mikita1012/ci-cd-practice/actions/workflows/ci.yml/badge.svg)
 
+# CI/CD Practice Repo 🚀
+
+![CI](https://github.com/Mikita1012/ci-cd-practice/actions/workflows/ci.yml/badge.svg)
+
+
