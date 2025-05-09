@@ -1,17 +1,18 @@
-
-import Counter from './Counter';
-import Footer from './Footer';
-import Hello from './Hello';
+import Counter from "./Counter";
+import Footer from "./Footer";
+import Hello from "./Hello";
 
 function App() {
   return (
-    <> 
-    <Hello />
-    <Counter />
-    <Footer/>
+    <>
+      <h1>{process.env.REACT_APP_HELLO_MSG}</h1>
+      <Hello />
+      <Counter />
+      <Footer />
     </>
-      
   );
 }
 
 export default App;
+
+
