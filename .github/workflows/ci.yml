@@ -40,6 +40,7 @@ jobs:
           deploy-message: 'Deployed from GitHub Actions 🚀'
           netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           site-id: 1b425a81-9f91-4743-875a-4d3ae10516b2
+          
 
       
   deploy: 
@@ -54,6 +55,10 @@ jobs:
           node-version: 18
       - run: npm install
       - run: npm run build
+
+      - name: Echo secret 
+        run : echo "My secret is ${{secrets.DUMMY_SECRET}}"
+        
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v2.0
         with:
