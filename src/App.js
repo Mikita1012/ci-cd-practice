@@ -8,6 +8,7 @@ function App() {
   return (
     <>
       <Header />
+
       <h1 className="text-center">{process.env.REACT_APP_HELLO_MSG}</h1>
       <Hello />
       <Counter />
@@ -17,5 +18,3 @@ function App() {
 }
 
 export default App;
-
-
