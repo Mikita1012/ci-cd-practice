@@ -1,16 +1,18 @@
-
-import Counter from './Counter';
-import Footer from './Footer';
-import Hello from './Hello';
+import Counter from "./Counter";
+import Footer from "./Footer";
+import Header from "./Header";
+import Hello from "./Hello";
 
 function App() {
+  console.log(process.env.REACT_APP_HELLO_MSG);
   return (
-    <> 
-    <Hello />
-    <Counter />
-    <Footer/>
+    <>
+      <Header />
+      <h1 className="text-center">{process.env.REACT_APP_HELLO_MSG}</h1>
+      <Hello />
+      <Counter />
+      <Footer />
     </>
-      
   );
 }
 
