@@ -10,6 +10,7 @@ function App() {
       <Header />
 
       <h1 className="text-center">{process.env.REACT_APP_HELLO_MSG}</h1>
+      <p>Contact No: XXX XXX 3908</p>
       <Hello />
       <Counter />
       <Footer />
