@@ -77,3 +77,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ![CI](https://github.com/Mikita1012/ci-cd-practice/actions/workflows/ci.yml/badge.svg)
 
 
+Testing if GITHUB ACTIONS work if .yml file has a property to ignore .md file
+
+git branch -m old-feature-branch archived/old-feature-branch
