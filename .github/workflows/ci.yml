@@ -5,6 +5,7 @@ on:
     branches: ["**"] #Run on *any* branch
   pull_request:
     branches: ["**"] # 
+  workflow_dispatch: #This line enables the "Run workflow" button  
 
 jobs:
   build:
@@ -38,8 +39,9 @@ jobs:
           production-branch: 'main'
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: 'Deployed from GitHub Actions 🚀'
-          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          site-id: 1b425a81-9f91-4743-875a-4d3ae10516b2
+        env:  
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          site-id: ${{ secrets.NETLIFY_SITE_ID }}
           
 
       
@@ -66,5 +68,6 @@ jobs:
           production-branch: 'main'
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: 'Deployed from GitHub Actions 🚀'
-          netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          site-id: 1b425a81-9f91-4743-875a-4d3ae10516b2
+        env:  
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
